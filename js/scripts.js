@@ -1,36 +1,36 @@
 function switchToAll() {
   removeActive();
   hideAll();
-  $("#Action-tab").addClass("is-active");
-  $("#Action-tab-content").removeClass("hidden");
+  $("#BNDesktop-tab").addClass("is-active");
+  $("#BNDesktop-tab-content").removeClass("hidden");
 }
 
 function switchToAdaptiveDesign() {
   removeActive();
   hideAll();
-  $("#result-tab").addClass("is-active");
-  $("#result-tab-content").removeClass("hidden");
+  $("#BNMobile-tab").addClass("is-active");
+  $("#BNMobile-tab-content").removeClass("hidden");
 }
 
 function switchTorJquery() {
   removeActive();
   hideAll();
-  $("#jquery-tab").addClass("is-active");
-  $("#jquery-tab-content").removeClass("hidden");
-}
-
-function switchToJquery() {
-  removeActive();
-  hideAll();
-  $("#username-tab").addClass("is-active");
-  $("#username-tab-content").removeClass("hidden");
+  $("#IntranetNews-tab").addClass("is-active");
+  $("#IntranetNews-tab-content").removeClass("hidden");
 }
 
 function switchToAngularJS() {
   removeActive();
   hideAll();
-  $("#angularjs-tab").addClass("is-active");
-  $("#angularjs-tab-content").removeClass("hidden");
+  $("#Autosys-tab").addClass("is-active");
+  $("#Autosys-tab-content").removeClass("hidden");
+}
+
+function switchToAngularJS2() {
+  removeActive();
+  hideAll();
+  $("#Windowsservices-tab").addClass("is-active");
+  $("#Windowsservices-tab-content").removeClass("hidden");
 }
 
 function removeActive() {
@@ -40,11 +40,11 @@ function removeActive() {
 }
 
 function hideAll(){
-  $("#Action-tab-content").addClass("hidden");
-  $("#result-tab-content").addClass("hidden");
-  $("#jquery-tab-content").addClass("hidden");
-  $("#username-tab-content").addClass("hidden");
-  $("#angularjs-tab-content").addClass("hidden");
+  $("#BNDesktop-tab-content").addClass("hidden");
+  $("#BNMobile-tab-content").addClass("hidden");
+  $("#IntranetNews-tab-content").addClass("hidden");
+  $("#Autosys-tab-content").addClass("hidden");
+  $("#Windowsservices-tab-content").addClass("hidden");
 }
 
 
