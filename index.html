@@ -67,8 +67,11 @@ display: none;
     <span class="tag is-warning is-medium"><label class="checkbox"><input id="eunow" type="checkbox"> eunow.barclays.com</label></span>
     <span class="tag is-danger is-medium"><label class="checkbox"><input id="cfnow" type="checkbox"> cfnow.barclays.com</label></span>
     <span class="tag is-danger is-medium"><label class="checkbox"><input id="pinow" type="checkbox"> pinow.barclays.com</label></span>
+    </div>
 
-    <span class="tag is-white is-medium"><label class="checkbox"><input onchange="return urlremarks_check()" id="url_remarks" type="checkbox"> remarks</label></span>
+    <div class="tags">
+      <span class="tag is-success is-medium"><label class="checkbox"><input id="url_checkall" onchange="return url_checkall_function()" type="checkbox"> Mark all as good</label></span>
+      <span class="tag is-medium"><label class="checkbox"><input id="url_remarks" onchange="return urlremarks_check()" type="checkbox"> Remarks</label></span>
     </div>
 
     <textarea id="url_remarks_textarea" class="remarks_textarea2 textarea hidden" placeholder="remarks"></textarea>
@@ -77,7 +80,7 @@ display: none;
 </article>
 <br>
 <!-- Linux health check box -->
-<article class="tile is-child notification is-info">
+<article class="tile is-child notification is-info lightgrey">
   <div class="content">
   <!-- <p class="title">Tall tile</p> -->
   <p class="subtitle">Barclays Now Desktop Linux Servers health check</p>

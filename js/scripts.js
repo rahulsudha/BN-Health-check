@@ -257,6 +257,26 @@ function urlremarks_check()
   }
 }
 
+function url_checkall_function()
+{
+  if (document.getElementById('url_checkall').checked) {
+    document.getElementById("tknow").checked = true;
+    document.getElementById("sgnow").checked = true;
+    document.getElementById("jhbnow").checked = true;
+    document.getElementById("eunow").checked = true;
+    document.getElementById("cfnow").checked = true;
+    document.getElementById("pinow").checked = true;
+  }
+  else {
+    document.getElementById("tknow").checked = false;
+    document.getElementById("sgnow").checked = false;
+    document.getElementById("jhbnow").checked = false;
+    document.getElementById("eunow").checked = false;
+    document.getElementById("cfnow").checked = false;
+    document.getElementById("pinow").checked = false;
+  }
+}
+
 
 function health_checkall_function()
 {
