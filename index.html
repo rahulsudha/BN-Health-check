@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barclays now start of the day health checks</title>
+<script src="js/scripts.js"></script>
+<link rel="stylesheet" href="css/bulma.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<style>
+.hidden {
+display: none;
+}
+</style>
+
+<body>
+<section class="section">
+<div class="container">
+
+<h1 class="title">Barclays Now</h1>
+<p class="subtitle">Barclays now start of the day<strong> health</strong> checks</p>
+
+<div class="tabs">
+  <ul>
+    <li id="Action-tab" class="is-active">
+      <a onClick="switchToAll()">
+      <!-- <span class="icon is-small"><i class="fas fa-globe"></i></span> -->
+      <span>Action</span>
+      </a>
+    </li>
+    <li id="result-tab">
+      <a onClick="switchToAdaptiveDesign()">
+      <!-- <span class="icon is-small"><i class="fas fa-exchange-alt"></i></span> -->
+      <span>Result</span>
+      </a>
+    </li>
+  </ul>
+</div><!--tabs declaration-->
+
+
+<div class="container"> <!-- container starts -->
+
+
+
+<!-- vpn tab contents starts here -->
+<div id="Action-tab-content">
+
+<!-- URL check box -->
+<article class="tile is-child notification is-dark">
+  <div class="content">
+    <!-- <p class="title">Tall tile</p> -->
+    <p class="subtitle">Barclays Now Desktop URL check</p>
+    <div class="buttons nomargin2">
+      <span class="button is-white">Open all sites</span>
+    </div>
+
+    Make a <strong>tick mark</strong> for the ones reporting good.
+
+    <div class="tags">
+    <span class="tag is-primary is-medium"><label class="checkbox"><input id="tknow" type="checkbox"> tknow.barclays.com</label></span>
+    <span class="tag is-primary is-medium"><label class="checkbox"><input id="sgnow" type="checkbox"> sgnow.barclays.com</label></span>
+    <span class="tag is-warning is-medium"><label class="checkbox"><input id="jhbnow" type="checkbox"> jhbnow.barclays.com</label></span>
+    <span class="tag is-warning is-medium"><label class="checkbox"><input id="eunow" type="checkbox"> eunow.barclays.com</label></span>
+    <span class="tag is-danger is-medium"><label class="checkbox"><input id="cfnow" type="checkbox"> cfnow.barclays.com</label></span>
+    <span class="tag is-danger is-medium"><label class="checkbox"><input id="pinow" type="checkbox"> pinow.barclays.com</label></span>
+
+    <span class="tag is-white is-medium"><label class="checkbox"><input onchange="return urlremarks_check()" id="url_remarks" type="checkbox"> remarks</label></span>
+    </div>
+
+    <textarea id="url_remarks_textarea" class="remarks_textarea2 textarea hidden" placeholder="remarks"></textarea>
+
+  </div>
+</article>
+<br>
+<!-- Linux health check box -->
+<article class="tile is-child notification is-info">
+  <div class="content">
+  <!-- <p class="title">Tall tile</p> -->
+  <p class="subtitle">Barclays Now Desktop Linux Servers health check</p>
+
+  Login to <strong>nykpsr000002420</strong> with intranet ID and copy below script command
+  <p></p>
+
+  <div class="field has-addons">
+  <div class="control is-expanded">
+  <input class="input" value="/home/srahul/scripts/check.sh list_consolidated" type="text" placeholder="Find a repository">
+  </div>
+  <div class="control">
+  <a class="button is-black">
+  copy
+  </a>
+  </div>
+  </div>
+
+  Make a <strong>tick mark</strong> for the ones reporting good. <p></p>
+
+  <div class="tags">
+  <span class="tag is-primary is-medium">Tokyo</span>
+  <span class="tag is-medium"><label class="checkbox"><input id="tk_tkypsr1181" type="checkbox"> tkypsr1181</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="tk_tkypsr1182" type="checkbox"> tkypsr1182</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="tk_tkypsr1183" type="checkbox"> tkypsr1183</label></span>
+
+  <span class="tag is-primary is-medium">Singapore</span>
+  <span class="tag is-medium"><label class="checkbox"><input id="sg_sgppsr00690" type="checkbox"> sgppsr00690</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="sg_sgppsr00691" type="checkbox"> sgppsr00691</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="sg_sgppsr00692" type="checkbox"> sgppsr00692</label></span>
+
+  <span class="tag is-warning is-medium">Johannesberg</span>
+  <span class="tag is-medium"><label class="checkbox"><input id="jhb_jhbpsr000000363" type="checkbox"> jhbpsr000000363</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="jhb_jhbpsr000000364" type="checkbox"> jhbpsr000000364</label></span>
+
+  <span class="tag is-warning is-medium">London</span>
+  <span class="tag is-medium"><label class="checkbox"><input id="eu_ldnpsr37508" type="checkbox"> ldnpsr37508</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="eu_ldnpsr37509" type="checkbox"> ldnpsr37509</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="eu_ldnpsr37510" type="checkbox"> ldnpsr37510</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="eu_ldnpsr37511" type="checkbox"> ldnpsr37511</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="eu_ldnpsr37378" type="checkbox"> ldnpsr37378</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="eu_ldnpsr37379" type="checkbox"> ldnpsr37379</label></span>
+
+  <span class="tag is-danger is-medium">Cranford</span>
+  <span class="tag is-medium"><label class="checkbox"><input id="cf_nykpsr10613" type="checkbox"> nykpsr10613</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="cf_nykpsr10614" type="checkbox"> nykpsr10614</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="cf_nykpsr10615" type="checkbox"> nykpsr10615</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="cf_nykpsr10616" type="checkbox"> nykpsr10616</label></span>
+
+  <span class="tag is-danger is-medium">Piscataway</span>
+  <span class="tag is-medium"><label class="checkbox"><input id="pi_nykpsr10591" type="checkbox"> nykpsr10591</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="pi_nykpsr10592" type="checkbox"> nykpsr10592</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="pi_nykpsr10593" type="checkbox"> nykpsr10593</label></span>
+  <span class="tag is-medium"><label class="checkbox"><input id="pi_nykpsr10594" type="checkbox"> nykpsr10594</label></span>
+
+  </div>
+
+  <div class="tags">
+    <span class="tag is-success is-medium"><label class="checkbox"><input id="health_checkall" onchange="return health_checkall_function()" type="checkbox"> Mark all as good</label></span>
+    <span class="tag is-medium"><label class="checkbox"><input id="health_remarks" onchange="return healthremarks_check()" type="checkbox"> Remarks</label></span>
+  </div>
+
+  <textarea id="health_remarks_textarea" class="remarks_textarea2 textarea hidden" placeholder="remarks"></textarea>
+
+
+  </div>
+</article>
+<br>
+<!-- Sitescope monitor 01 -->
+<article class="tile is-child notification is-light">
+  <div class="content">
+  <!-- <p class="title">Tall tile</p> -->
+  <p class="subtitle">Sitescope monitor status check</p>
+  Web Servers: <strong>now.barclays.com</strong> and <strong>nowws.barclays.com</strong><br>
+  App Servers: <strong>JBoss EAS</strong>
+  <div class="content">
+  </div>
+  </div>
+</article>
+<br>
+
+
+<!-- Sitescope monitor 02 columns -->
+<div class="columns nomargin">
+
+  <!-- TOKYO COLUMN -->
+    <div class="column leftandright_no_padding">
+      <article class="message tealcolor">
+      <div class="message-body noborder">
+
+      <h5 class="subtitle is-5"><strong>Tokyo</strong></h5>
+      Server <span class="tag is-dark">tkypsr1181</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">tkypsr1182</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">tkypsr1183</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+      <br><br>
+
+      <span class="tag is-white"><label class="checkbox"><input id="tokyoremarks" type="checkbox" onchange="return tokyoremarks_check()"> Has remarks</label> </span>
+      <br><br>
+
+      <!-- Tokyo text area -->
+      <div class="field">
+      <div class="control">
+      <textarea id="tokyoremarks_textarea" class="textarea hidden remarks_textarea is-dark" placeholder="remarks"></textarea>
+      </div>
+      </div>
+
+
+
+      </div>
+      </article>
+    </div>
+  <!-- TOKYO COLUMN -->
+
+  <!-- SINGAPORE COLUMN -->
+    <div class="column leftandright_no_padding">
+      <article class="message tealcolor">
+      <div class="message-body noborder">
+
+      <h5 class="subtitle is-5"><strong>Singapore</strong></h5>
+      Server <span class="tag is-dark">sgppsr00690</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">sgppsr00691</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">sgppsr00692</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+      <br><br>
+
+      <span class="tag is-white"><label class="checkbox"><input id="singaporeremarks" type="checkbox" onchange="return singaporeremarks_check()"> Has remarks</label> </span>
+      <br><br>
+
+      <!-- singapore text area -->
+      <div class="field">
+      <div class="control">
+      <textarea id="singaporeremarks_textarea" class="textarea hidden remarks_textarea is-dark" placeholder="remarks"></textarea>
+      </div>
+      </div>
+
+      </div>
+      </article>
+    </div>
+  <!-- SINGAPORE COLUMN -->
+
+  <!-- JOHANNESBERG COLUMN -->
+    <div class="column leftandright_no_padding">
+      <article class="message yellowcolor">
+      <div class="message-body noborder">
+
+      <h5 class="subtitle is-5"><strong>Johannesberg</strong></h5>
+      Server <span class="tag is-dark">jhbpsr000000363</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">jhbpsr000000364</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+      <br><br>
+
+      <span class="tag is-white"><label class="checkbox"><input id="johannesbergremarks" type="checkbox" onchange="return johannesbergremarks_check()"> Has remarks</label> </span>
+      <br><br>
+
+      <!-- johannesberg text area -->
+      <div class="field">
+      <div class="control">
+      <textarea id="johannesbergremarks_textarea" class="textarea hidden remarks_textarea is-dark" placeholder="remarks"></textarea>
+      </div>
+      </div>
+
+      </div>
+      </article>
+    </div>
+  <!-- JOHANNESBERG COLUMN -->
+
+  <!-- LONDON COLUMN -->
+    <div class="column leftandright_no_padding">
+      <article class="message yellowcolor">
+      <div class="message-body noborder">
+
+      <h5 class="subtitle is-5"><strong>London</strong></h5>
+      Server <span class="tag is-dark">ldnpsr37508</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">ldnpsr37509</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">ldnpsr37510</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">ldnpsr37511</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">ldnpsr37378</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">ldnpsr37379</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+      <br><br>
+
+      <span class="tag is-white"><label class="checkbox"><input id="londonremarks" type="checkbox" onchange="return londonremarks_check()"> Has remarks</label> </span>
+      <br><br>
+
+      <!-- london text area -->
+      <div class="field">
+      <div class="control">
+      <textarea id="londonremarks_textarea" class="textarea hidden remarks_textarea is-dark" placeholder="remarks"></textarea>
+      </div>
+      </div>
+
+
+      </div>
+      </article>
+    </div>
+  <!-- LONDON COLUMN -->
+
+  <!-- CRANFORD COLUMN -->
+    <div class="column leftandright_no_padding">
+      <article class="message redcolor">
+      <div class="message-body noborder">
+
+      <h5 class="subtitle is-5"><strong>Cranford</strong></h5>
+      Server <span class="tag is-dark">nykpsr10613</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">nykpsr10614</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">nykpsr10615</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">nykpsr10616</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+      <br><br>
+
+      <span class="tag is-white"><label class="checkbox"><input id="cranfordremarks" type="checkbox" onchange="return cranfordremarks_check()"> Has remarks</label> </span>
+      <br><br>
+
+      <!-- cranford text area -->
+      <div class="field">
+      <div class="control">
+      <textarea id="cranfordremarks_textarea" class="textarea hidden remarks_textarea is-dark" placeholder="remarks"></textarea>
+      </div>
+      </div>
+
+      </div>
+      </article>
+    </div>
+  <!-- CRANFORD COLUMN -->
+
+  <!-- PISCATAWAY COLUMN -->
+    <div class="column leftandright_no_padding">
+      <article class="message redcolor">
+      <div class="message-body noborder">
+
+      <h5 class="subtitle is-5"><strong>Piscataway</strong></h5>
+      Server <span class="tag is-dark">nykpsr10591</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">nykpsr10592</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">nykpsr10593</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+
+      Server <span class="tag is-dark">nykpsr10594</span>
+      <label class="checkbox"><input type="checkbox"> Web Servers</label>
+      <label class="checkbox"><input type="checkbox"> App Servers</label>
+      <br><br>
+
+      <span class="tag is-white"><label class="checkbox"><input id="piscatawayremarks" type="checkbox" onchange="return piscatawayremarks_check()"> Has remarks</label> </span>
+      <br><br>
+
+      <!-- piscataway text area -->
+      <div class="field">
+      <div class="control">
+      <textarea id="piscatawayremarks_textarea" class="textarea hidden remarks_textarea is-dark" placeholder="remarks"></textarea>
+      </div>
+      </div>
+
+      </div>
+      </article>
+    </div>
+  <!-- PISCATAWAY COLUMN -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- vpn tab contents ended here -->
+
+<!-- result tab contents starts here -->
+<div class="hidden" id="result-tab-content">
+
+
+
+
+</div>
+<!-- queue create tab contents ended here -->
+
+
+
+</div> <!-- container ends -->
+
+
+
+
+
+
+
+
+
+</div>  <!-- first container ends -->
+</section>  <!-- section ends -->
+
+<br><br><br>
+<footer class="footer">
+<div class="content has-text-centered">
+<p>
+<strong>Barclays now start of the day health checks</strong> by <a href="https://jgthms.com">Rahul S</a>. The source code is licensed
+<a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+</p>
+</div>
+</footer>
+</body>
+
+</html>
