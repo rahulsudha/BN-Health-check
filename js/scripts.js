@@ -164,9 +164,32 @@ function queue_tab_validate()
 //| Functions for BN health checks |
 //+--------------------------------+
 
-window.onbeforeunload = function() {
-  return "Data will be lost if you leave the page, are you sure?";
-};
+// window.onbeforeunload = function() {
+//   return "Data will be lost if you leave the page, are you sure?";
+// };
+
+function autosys_ldn_remarks_textarea_check()
+{
+if (document.getElementById('autosys_ldn_remarks').checked) {
+//alert("checked");
+$("#autosys_ldn_remarks_textarea").removeClass("hidden");
+} else {
+//alert("not checked");
+$("#autosys_ldn_remarks_textarea").addClass("hidden");
+}
+}
+
+function autosys_nyk_remarks_textarea_check()
+{
+if (document.getElementById('autosys_nyk_remarks').checked) {
+//alert("checked");
+$("#autosys_nyk_remarks_textarea").removeClass("hidden");
+} else {
+//alert("not checked");
+$("#autosys_nyk_remarks_textarea").addClass("hidden");
+}
+}
+
 
 function tokyoremarks_check()
 {

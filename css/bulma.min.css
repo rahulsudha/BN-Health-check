@@ -1,6 +1,9 @@
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
 
-
+.checkdisabled
+{
+  cursor: not-allowed !important;
+}
 
 
 .remarks_textarea
